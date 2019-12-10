@@ -10,7 +10,7 @@ const useStyles = makeStyles(theme => ({
   topHeaderLayout: {
     display: "grid",
     gridTemplateColumns: "20% auto",
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("xs")]: {
       gridTemplateColumns: "auto"
     },
     padding: "32px 0"
@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
     alignItems: "center",
     justifyContent: "center",
     margin: "0 32px 0 0",
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("xs")]: {
       display: "none"
     }
   },
