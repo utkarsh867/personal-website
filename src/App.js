@@ -4,6 +4,7 @@ import Container from "@material-ui/core/Container";
 import Header from "./components/Header";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Projects />
         <Skills />
       </Container>
+      <Footer />
     </div>
   );
 }
