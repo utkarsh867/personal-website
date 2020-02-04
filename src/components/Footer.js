@@ -21,7 +21,7 @@ const Footer = () => {
     <div className={classes.footerContainer}>
       <Container>
         <Typography className={classes.footerText}>
-          Last updated: 10th December
+          Last updated: 5th February, 2020
         </Typography>
       </Container>
     </div>
