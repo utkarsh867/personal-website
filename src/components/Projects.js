@@ -6,6 +6,7 @@ import ProjectCard from "./ProjectCard";
 import slsImage from "../images/sls.png";
 import ooCamImage from "../images/oocam.png";
 import dragonSearchImage from "../images/dragon.png";
+import codeExpress from "../images/codexpress.jpg";
 
 const useStyles = makeStyles(theme => ({
   projectsSection: {
@@ -69,6 +70,16 @@ const Projects = () => {
           }
           link="https://github.com/davidbhan/Chengdu80"
           spanSize={1}
+        />
+
+        <ProjectCard
+            title="CodeXpress Myanmar - Urban Farming"
+            image={codeExpress}
+            text={
+              "An urban farming IoT device that shows the role of technology in sustainability. The project aims to address a common global problem on food production through urban farming"
+            }
+            link="http://codesustain.kitgor.com/2018-urban-farming/"
+            spanSize={1}
         />
       </div>
     </>

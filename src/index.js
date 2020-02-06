@@ -31,10 +31,16 @@ const theme = responsiveFontSizes(createMuiTheme({
             fontWeight: "bold",
             fontSize: "32px"
         },
+        h2: {
+            fontFamily: "Quicksand, sans-serif",
+            fontWeight: "100",
+            fontSize: "24px",
+        },
         h3: {
             fontFamily: "Quicksand, sans-serif",
             fontWeight: "100",
-            fontSize: "24px"
+            fontSize: "24px",
+            padding: "0 0 10px 0"
         },
         h4: {
             fontFamily: "Quicksand, sans-serif",
@@ -42,9 +48,14 @@ const theme = responsiveFontSizes(createMuiTheme({
             fontSize: "18px"
         },
         body1: {
-            fontFamily: "Quicksand, sans-serif",
+            fontFamily: "Roboto, sans-serif",
             fontWeight: 300,
             fontSize: "16px"
+        },
+        body2: {
+            fontFamily: "Roboto, sans-serif",
+            fontWeight: 300,
+            fontSize: "12px"
         }
     }
 }));

@@ -12,7 +12,6 @@ const useStyles = makeStyles(theme => ({
     sectionTitle: {
         color: "#ffab40",
         fontWeight: 800,
-        margin: "0 0 32px 0"
     }
 }));
 

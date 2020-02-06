@@ -45,7 +45,7 @@ const ProjectCard = ({ title, text, link, image, spanSize }) => {
       </CardActionArea>
       <CardActions>
         <Button size="small" href={link}>
-          <Typography variant="body1" className={classes.projectText}>
+          <Typography variant="body2" className={classes.projectText}>
             Learn more
           </Typography>
         </Button>
