@@ -3,6 +3,7 @@ module.exports = {
     title: `Utkarsh Goel`,
     description: `Utkarsh Goel - Bachelor of Engineering, University of Hong Kong, Software development and electronics.`,
     author: `@utkarsh867`,
+    siteUrl: `https://www.utkarshgoel.dev/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -45,8 +46,9 @@ module.exports = {
       },
     },
     `gatsby-plugin-material-ui`,
+    `gatsby-plugin-cname`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
   ],
 }
