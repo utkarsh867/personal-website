@@ -1,31 +1,31 @@
-import React from "react";
-import { Typography } from "@material-ui/core";
-import { makeStyles } from "@material-ui/styles";
-import MailIcon from "@material-ui/icons/Mail";
-import ButtonBase from "@material-ui/core/ButtonBase";
+import React from "react"
+import { Typography } from "@material-ui/core"
+import { makeStyles } from "@material-ui/styles"
+import MailIcon from "@material-ui/icons/Mail"
+import ButtonBase from "@material-ui/core/ButtonBase"
 
 const useStyles = makeStyles(theme => ({
   container: {
-    margin: "30px 0 20vh 0"
+    margin: "30px 0 20vh 0",
   },
   mailIcon: {
     color: "#d1d1d1",
     fontSize: 120,
-    margin: "0 20px"
+    margin: "0 20px",
   },
   elementContainer: {
     display: "grid",
     alignItems: "center",
-    gridTemplateColumns: "1fr auto auto 1fr"
+    gridTemplateColumns: "1fr auto auto 1fr",
   },
   buttonbase: {
     width: "100%",
-    margin: "40px 0"
-  }
-}));
+    margin: "40px 0",
+  },
+}))
 
 export const Contact = () => {
-  const classes = useStyles();
+  const classes = useStyles()
   return (
     <div className={classes.container}>
       <Typography variant="h1">Contact Me</Typography>
@@ -45,5 +45,5 @@ export const Contact = () => {
         </div>
       </ButtonBase>
     </div>
-  );
-};
+  )
+}
