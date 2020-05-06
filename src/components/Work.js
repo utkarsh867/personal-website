@@ -1,11 +1,11 @@
-import { Typography } from "@material-ui/core";
-import React from "react";
-import makeStyles from "@material-ui/core/styles/makeStyles";
-import { WorkCard } from "./WorkCard";
-import csLogo from "../images/cs_logo.jpg";
-import rcTechLogo from "../images/rctechlogo.svg";
+import { Typography } from "@material-ui/core"
+import React from "react"
+import makeStyles from "@material-ui/core/styles/makeStyles"
+import { WorkCard } from "./WorkCard"
+import csLogo from "../images/cs_logo.jpg"
+import rcTechLogo from "../images/rctechlogo.svg"
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   container: {
     margin: "20px 0 200px 0",
     padding: "0 2vw",
@@ -16,10 +16,10 @@ const useStyles = makeStyles((theme) => ({
   sectionTitle: {
     fontWeight: 800,
   },
-}));
+}))
 
 export const Work = () => {
-  const classes = useStyles(undefined);
+  const classes = useStyles(undefined)
   return (
     <div className={classes.container}>
       <Typography variant="h1" className={classes.sectionTitle}>
@@ -29,7 +29,7 @@ export const Work = () => {
         <WorkCard
           title="Credit Suisse"
           subtitle="Summer Analyst (IT)"
-          link="https://www.credit-suisse.com/hk/en.html"
+          link=""
           image={csLogo}
           text={
             "Full stack developer - Worked on multiple projects to be used within Credit Suisse by the prime services division."
@@ -53,5 +53,5 @@ export const Work = () => {
         />
       </div>
     </div>
-  );
-};
+  )
+}

@@ -1,5 +1,5 @@
-import React from "react";
-import makeStyles from "@material-ui/core/styles/makeStyles";
+import React from "react"
+import makeStyles from "@material-ui/core/styles/makeStyles"
 import {
   Typography,
   Card,
@@ -7,40 +7,40 @@ import {
   CardActionArea,
   CardContent,
   CardActions,
-  Button
-} from "@material-ui/core";
-import { Parallax } from "rc-scroll-anim";
+  Button,
+} from "@material-ui/core"
+import { Parallax } from "rc-scroll-anim"
 
 const useStyles = makeStyles(theme => ({
   projectsContainer: {
-    backgroundColor: "#242424",
     borderRadius: "5px",
-    gridRowEnd: props => `span ${props.spanSize}`
+    gridRowEnd: props => `span ${props.spanSize}`,
   },
   projectsContainerCard: {
-    backgroundColor: "#242424",
-    height: "100%"
+    backgroundColor: theme.palette.background.default,
+    elevation: 0,
+    height: "100%",
   },
   projectsContainerImage: {
-    width: "100%"
+    width: "100%",
   },
   projectText: {
-    color: "white"
+    color: "white",
   },
   projectSubText: {
-    color: "white"
-  }
-}));
+    color: "white",
+  },
+}))
 
 const ProjectCard = ({ title, text, link, image, spanSize }) => {
-  const classes = useStyles({ spanSize });
+  const classes = useStyles({ spanSize })
   return (
     <Parallax
       animation={{ y: 0, opacity: 1, playScale: [0.1, 0.7] }}
       style={{ transform: "translateY(100px)", opacity: 0 }}
       className={classes.projectsContainer}
     >
-      <Card className={classes.projectsContainerCard}>
+      <Card className={classes.projectsContainerCard} elevation={0}>
         <CardActionArea href={link}>
           <CardMedia component="img" image={image} title={title} />
           <CardContent>
@@ -55,13 +55,13 @@ const ProjectCard = ({ title, text, link, image, spanSize }) => {
         <CardActions>
           <Button size="small" href={link}>
             <Typography variant="body2" className={classes.projectText}>
-              Learn more
+              See project
             </Typography>
           </Button>
         </CardActions>
       </Card>
     </Parallax>
-  );
-};
+  )
+}
 
-export default ProjectCard;
+export default ProjectCard

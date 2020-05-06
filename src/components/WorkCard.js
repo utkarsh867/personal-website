@@ -1,16 +1,16 @@
-import React from "react";
-import makeStyles from "@material-ui/core/styles/makeStyles";
-import Paper from "@material-ui/core/Paper";
-import ButtonBase from "@material-ui/core/ButtonBase";
-import { Typography } from "@material-ui/core";
+import React from "react"
+import makeStyles from "@material-ui/core/styles/makeStyles"
+import Paper from "@material-ui/core/Paper"
+import ButtonBase from "@material-ui/core/ButtonBase"
+import { Typography } from "@material-ui/core"
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   container: {
     display: "grid",
     width: "100%",
     gridTemplateColumns: "1fr 7fr",
     borderRadius: "20px",
-    backgroundColor: "#242424",
+    backgroundColor: theme.palette.background.default,
     [theme.breakpoints.down("xs")]: {
       gridTemplateColumns: "2fr 6fr",
     },
@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
   },
   buttonbase: {
     width: "100%",
-    backgroundColor: "#242424",
+    backgroundColor: theme.palette.background.default,
     margin: "10px 0",
     borderRadius: "20px",
   },
@@ -51,16 +51,16 @@ const useStyles = makeStyles((theme) => ({
       padding: "10px 15px",
     },
   },
-}));
+}))
 
 export const WorkCard = ({ title, subtitle, text, link, image }) => {
-  const classes = useStyles();
+  const classes = useStyles()
   return (
     <ButtonBase
       className={classes.buttonbase}
-      onClick={() => window.location.assign(link)}
+      onClick={() => (link == "" ? null : window.location.assign(link))}
     >
-      <Paper className={classes.container}>
+      <Paper className={classes.container} elevation={0}>
         <div>
           <img className={classes.image} src={image} alt={title} />
         </div>
@@ -77,5 +77,5 @@ export const WorkCard = ({ title, subtitle, text, link, image }) => {
         </div>
       </Paper>
     </ButtonBase>
-  );
-};
+  )
+}

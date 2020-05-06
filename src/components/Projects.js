@@ -1,14 +1,15 @@
-import React from "react";
-import makeStyles from "@material-ui/core/styles/makeStyles";
-import { Typography } from "@material-ui/core";
-import clearbotImage from "../images/clearbot.jpg";
-import ProjectCard from "./ProjectCard";
-import slsImage from "../images/sls.png";
-import ooCamImage from "../images/oocam.png";
-import dragonSearchImage from "../images/dragon.png";
-import codeExpress from "../images/codexpress.jpg";
+import React from "react"
+import makeStyles from "@material-ui/core/styles/makeStyles"
+import { Typography } from "@material-ui/core"
+import clearbotImage from "../images/clearbot.jpg"
+import ProjectCard from "./ProjectCard"
+import slsImage from "../images/sls.png"
+import ooCamImage from "../images/oocam.png"
+import dragonSearchImage from "../images/dragon.png"
+import codeExpress from "../images/codexpress.jpg"
+import phoenix from "../images/rctechlogo.svg"
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   projectsSection: {
     display: "grid",
     gridTemplateColumns: "auto auto auto",
@@ -22,14 +23,14 @@ const useStyles = makeStyles((theme) => ({
   sectionTitle: {
     margin: "32px 0",
   },
-}));
+}))
 
 const Projects = () => {
-  const classes = useStyles();
+  const classes = useStyles()
   return (
     <>
       <Typography variant="h1" className={classes.sectionTitle}>
-        Recent projects
+        Projects
       </Typography>
       <div className={classes.projectsSection}>
         <ProjectCard
@@ -51,6 +52,15 @@ const Projects = () => {
           spanSize={1}
         />
 
+        <ProjectCard
+          title="Phoenix"
+          image={phoenix}
+          text={
+            "The GraphQL API server which is central to the applications in RC Tech Club"
+          }
+          link="https://github.com/rcltech/phoenix"
+          spanSize={1}
+        />
         <ProjectCard
           title="Open Ocean Camera"
           image={ooCamImage}
@@ -82,7 +92,7 @@ const Projects = () => {
         />
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Projects;
+export default Projects
