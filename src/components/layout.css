@@ -14,3 +14,7 @@ body {
   font-weight: "bold";
   src: url("../fonts/JetBrainsMono-Bold.ttf");
 }
+
+img {
+  width: 100%;
+}

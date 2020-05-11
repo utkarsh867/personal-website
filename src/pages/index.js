@@ -84,8 +84,7 @@ const IndexPage = () => {
         <Layout>
           <SEO title="Home" />
           <CssBaseline />
-          <Header />
-          <Container className={classes.appContainer}>
+          <Container maxWidth="sm" className={classes.appContainer}>
             <Intro />
           </Container>
           <Container>

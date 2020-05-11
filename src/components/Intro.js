@@ -1,96 +1,99 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { Typography, makeStyles } from "@material-ui/core"
-import Typist from "react-typist"
+import profileImage from "../images/profile.jpg"
+import GitHubIcon from "@material-ui/icons/GitHub"
+import TwitterIcon from "@material-ui/icons/Twitter"
+import Link from "@material-ui/core/Link"
+import MailIcon from "@material-ui/icons/Mail"
+import LinkedInIcon from "@material-ui/icons/LinkedIn"
+import { useSpring, animated } from "react-spring"
 
 const useStyles = makeStyles(theme => ({
   introContainer: {
     display: "flex",
     height: "100%",
-    padding: "10vh 2vw",
+    width: "100%",
     alignItems: "center",
-    color: "#d1d1d1",
+    justifyContent: "center",
+  },
+  innerContainer: {
+    display: "grid",
+    width: "100%",
+    gridTemplateColumns: "1fr",
+    justifyContent: "center",
+    textAlign: "center",
   },
   text: {
     color: "#d1d1d1",
-    fontSize: "2em",
+    padding: "10px 0",
+  },
+  profileImageContainer: {
+    display: "grid",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: 50,
+  },
+  profileImgStyles: {
+    width: "100%",
+    borderRadius: "50%",
+  },
+  socialContainer: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    margin: "20px",
+    height: "100px",
+  },
+  socialIcons: {
+    color: "white",
+    transition: "all 0.2s ease-in",
+    margin: 10,
+    fontSize: theme.typography.h1.fontSize,
+    transform: "scale(1)",
+    "&:hover": {
+      transform: "scale(1.2)",
+    },
   },
 }))
 
 export const Intro = () => {
   const classes = useStyles()
+  const fadeIn = useSpring({
+    opacity: 1,
+    from: { opacity: 0.05 },
+    config: { duration: 600 },
+    delay: 500,
+  })
+
   return (
     <div className={classes.introContainer}>
-      <Typography className={classes.text} variant="h2">
-        <Typist
-          cursor={{
-            show: true,
-            blink: true,
-            element: "|",
-            hideWhenDone: true,
-            hideWhenDoneDelay: 200,
-          }}
-          startDelay={2000}
-          avgTypingDelay={9}
-        >
-          <span>Name: Utkarsh Goel</span>
-          <br />
-          <span>
-            <em>Engineer</em>
-          </span>
-          <br />
-          <br />
-          <span>Education: The University of Hong Kong</span>
-          <Typist.Delay ms={500} />
-          <br />
-          <br />
-          <br />
-          <span>
-            Working on things involving:
-            <ul>
-              <li>Web Application Development</li>
-              <li>Mobile Application Development</li>
-              <li>Computer Vision</li>
-              <li>Machine Learning</li>
-              <li>IoT and robotics</li>
-            </ul>
-          </span>
-          <Typist.Delay ms={1000} />
-          <br />
-          <br />
-          <span>Get in touch at: </span>
-          <a href="mailto:contact@utkarshgoel.dev" style={{ color: "#d1d1d1" }}>
-            contact@utkarshgoel.dev
-          </a>
-          <br />
-          <br />
-          <br />
-          <span>
-            Get to know about my work at:
-            <ul>
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/utkarsh867/"
-                  style={{ color: "#d1d1d1" }}
-                >
-                  LinkedIn
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/utkarsh867"
-                  style={{ color: "#d1d1d1" }}
-                >
-                  GitHub
-                </a>
-              </li>
-            </ul>
-          </span>
-          <br />
-          <br />
-          <br />
-          <span>Scroll down for more</span>
-        </Typist>
-      </Typography>
+      <animated.div className={classes.innerContainer} style={fadeIn}>
+        <div className={classes.profileImageContainer}>
+          <img
+            className={classes.profileImgStyles}
+            src={profileImage}
+            alt={"Profile"}
+          />
+        </div>
+        <Typography className={classes.text} variant="h2">
+          Utkarsh Goel
+        </Typography>
+        <Typography variant="h4">Engineer, Software Developer</Typography>
+        <div className={classes.socialContainer}>
+          <Link href={"https://github.com/utkarsh867"}>
+            <GitHubIcon className={classes.socialIcons} />
+          </Link>
+          <Link href={"https://www.linkedin.com/in/utkarsh867/"}>
+            <LinkedInIcon className={classes.socialIcons} />
+          </Link>
+          <Link href={"https://twitter.com/ug867"}>
+            <TwitterIcon className={classes.socialIcons} />
+          </Link>
+          <Link href={"mailto:contact@utkarshgoel.dev"}>
+            <MailIcon className={classes.socialIcons}></MailIcon>
+          </Link>
+        </div>
+      </animated.div>
     </div>
   )
 }
