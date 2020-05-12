@@ -12,6 +12,7 @@ const useStyles = makeStyles(theme => ({
   introContainer: {
     display: "flex",
     height: "100%",
+    minHeight: "540px",
     width: "100%",
     alignItems: "center",
     justifyContent: "center",
@@ -21,6 +22,7 @@ const useStyles = makeStyles(theme => ({
     width: "100%",
     gridTemplateColumns: "1fr",
     justifyContent: "center",
+    justifyItems: "center",
     textAlign: "center",
   },
   text: {
@@ -32,6 +34,9 @@ const useStyles = makeStyles(theme => ({
     alignItems: "center",
     justifyContent: "center",
     padding: 50,
+    [theme.breakpoints.up("sm")]: {
+      width: "70%",
+    },
   },
   profileImgStyles: {
     width: "100%",
