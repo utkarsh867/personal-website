@@ -6,7 +6,7 @@ const useStyles = makeStyles(theme => ({
   footerContainer: {
     display: "grid",
     margin: "10px 0 0 0",
-    padding: "5px 0",
+    padding: "20px 0",
     backgroundColor: "#000",
     width: "100%",
   },
@@ -21,7 +21,7 @@ const Footer = () => {
     <div className={classes.footerContainer}>
       <Container>
         <Typography className={classes.footerText}>
-          Last updated: 16th April, 2020
+          Last updated: 16th May, 2020
         </Typography>
       </Container>
     </div>

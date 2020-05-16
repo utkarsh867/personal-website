@@ -7,7 +7,7 @@ import rcTechLogo from "../images/rctechlogo.svg"
 
 const useStyles = makeStyles(theme => ({
   container: {
-    margin: "20px 0 200px 0",
+    margin: "20px 0 20px 0",
     padding: "0 2vw",
   },
   section: {
@@ -22,7 +22,7 @@ export const Work = () => {
   const classes = useStyles(undefined)
   return (
     <div className={classes.container}>
-      <Typography variant="h1" className={classes.sectionTitle}>
+      <Typography variant="h2" className={classes.sectionTitle}>
         Work Experience
       </Typography>
       <div className={classes.section}>
@@ -37,13 +37,13 @@ export const Work = () => {
           spanSize={1}
         />
       </div>
-      <Typography variant="h1" className={classes.sectionTitle}>
+      <Typography variant="h2" className={classes.sectionTitle}>
         Organizations
       </Typography>
       <div className={classes.section}>
         <WorkCard
           title="RC Tech Club"
-          subtitle="Founder | President"
+          subtitle="Founder"
           link="https://rctech.club"
           image={rcTechLogo}
           text={

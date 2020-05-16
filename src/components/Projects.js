@@ -1,6 +1,6 @@
 import React from "react"
 import makeStyles from "@material-ui/core/styles/makeStyles"
-import { Typography } from "@material-ui/core"
+import { Container, Typography } from "@material-ui/core"
 import clearbotImage from "../images/clearbot.jpg"
 import ProjectCard from "./ProjectCard"
 import slsImage from "../images/sls.png"
@@ -10,6 +10,9 @@ import codeExpress from "../images/codexpress.jpg"
 import phoenix from "../images/rctechlogo.svg"
 
 const useStyles = makeStyles(theme => ({
+  container: {
+    padding: "0 2vw",
+  },
   projectsSection: {
     display: "grid",
     gridTemplateColumns: "auto auto auto",
@@ -28,21 +31,11 @@ const useStyles = makeStyles(theme => ({
 const Projects = () => {
   const classes = useStyles()
   return (
-    <>
-      <Typography variant="h1" className={classes.sectionTitle}>
+    <Container className={classes.container}>
+      <Typography variant="h2" className={classes.sectionTitle}>
         Projects
       </Typography>
       <div className={classes.projectsSection}>
-        <ProjectCard
-          title="Smart Laundry System"
-          image={slsImage}
-          text={
-            "An IoT project to make ordinary washing machines into smart washing machines. SLS (Smart Laundry System) by R.C. Tech Club aims to help hall residents in R.C. Lee Hall view the availability of laundry machines that are situated on the 16th floor using their mobile devices. "
-          }
-          link="https://sls.rctech.club"
-          spanSize={2}
-        />
-
         <ProjectCard
           title="ClearBot"
           text="Decentralized Robot Swarms to Clean our Oceans.
@@ -72,6 +65,15 @@ const Projects = () => {
         />
 
         <ProjectCard
+          title="Smart Laundry System"
+          image={slsImage}
+          text={
+            "An IoT project to make ordinary washing machines into smart washing machines. SLS (Smart Laundry System) by R.C. Tech Club aims to help hall residents in R.C. Lee Hall view the availability of laundry machines that are situated on the 16th floor using their mobile devices. "
+          }
+          link="https://sls.rctech.club"
+          spanSize={2}
+        />
+        <ProjectCard
           title="Dragon Search"
           image={dragonSearchImage}
           text={
@@ -91,7 +93,7 @@ const Projects = () => {
           spanSize={1}
         />
       </div>
-    </>
+    </Container>
   )
 }
 

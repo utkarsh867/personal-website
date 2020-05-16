@@ -3,6 +3,7 @@ import makeStyles from "@material-ui/core/styles/makeStyles"
 import {
   Typography,
   Card,
+  Container,
   CardMedia,
   CardActionArea,
   CardContent,
@@ -35,11 +36,7 @@ const useStyles = makeStyles(theme => ({
 const ProjectCard = ({ title, text, link, image, spanSize }) => {
   const classes = useStyles({ spanSize })
   return (
-    <Parallax
-      animation={{ y: 0, opacity: 1, playScale: [0.1, 0.7] }}
-      style={{ transform: "translateY(100px)", opacity: 0 }}
-      className={classes.projectsContainer}
-    >
+    <Container className={classes.projectsContainer}>
       <Card className={classes.projectsContainerCard} elevation={0}>
         <CardActionArea href={link}>
           <CardMedia component="img" image={image} title={title} />
@@ -60,7 +57,7 @@ const ProjectCard = ({ title, text, link, image, spanSize }) => {
           </Button>
         </CardActions>
       </Card>
-    </Parallax>
+    </Container>
   )
 }
 

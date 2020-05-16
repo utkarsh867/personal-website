@@ -65,7 +65,7 @@ export const WorkCard = ({ title, subtitle, text, link, image }) => {
           <img className={classes.image} src={image} alt={title} />
         </div>
         <div className={classes.textSection}>
-          <Typography variant="h2" className={classes.heading}>
+          <Typography variant="h3" className={classes.heading}>
             {title}
           </Typography>
           <Typography variant="h4" className={classes.subheading}>

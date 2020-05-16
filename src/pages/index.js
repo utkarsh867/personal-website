@@ -46,12 +46,13 @@ const theme = responsiveFontSizes(
         color: "white",
       },
       h3: {
-        fontFamily: "Sen, sans-serif",
+        fontFamily: "Roboto, sans-serif",
         fontWeight: "100",
         padding: "0 0 10px 0",
+        color: "#FAFAFA",
       },
       h4: {
-        fontFamily: "Quicksand, sans-serif",
+        fontFamily: "Roboto, sans-serif",
         color: "#d1d1d1",
       },
       body1: {
@@ -88,9 +89,9 @@ const IndexPage = () => {
             <Intro />
           </Container>
           <Container>
-            <Skills />
-            <Work />
             <Projects />
+            <Work />
+            <Skills />
           </Container>
         </Layout>
       </ParallaxProvider>

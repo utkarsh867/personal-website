@@ -1,6 +1,5 @@
 import React from "react"
 import { Typography, makeStyles } from "@material-ui/core"
-import { Parallax } from "rc-scroll-anim"
 import django from "../images/logos/django.svg"
 import nodejs from "../images/logos/nodejs.svg"
 import reactjs from "../images/logos/react.svg"
@@ -9,6 +8,7 @@ import flutter from "../images/logos/flutter.svg"
 import androidstudio from "../images/logos/androidstudio.svg"
 import docker from "../images/logos/docker.svg"
 import kubernets from "../images/logos/kubernets.svg"
+import travis from "../images/logos/travis.svg"
 
 const useStyles = makeStyles(theme => ({
   headerText: {
@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
     color: "white",
   },
   container: {
-    margin: "20px 0 20vh 0",
+    margin: "20px 0 20px 0",
     padding: "0 2vw",
   },
   heading: {
@@ -28,6 +28,7 @@ const useStyles = makeStyles(theme => ({
     margin: "20px 0",
     display: "grid",
     gridTemplateColumns: "auto",
+    gridTemplateRows: "auto 1fr",
   },
   skillGrid: {
     display: "grid",
@@ -64,59 +65,39 @@ export const Skills = () => {
 
   return (
     <div className={classes.container}>
-      <Parallax
-        animation={{ y: 0, opacity: 1, playScale: [0.1, 0.5] }}
-        style={{ transform: "translateY(100px)", opacity: 0 }}
-      >
-        <Typography className={classes.heading} variant="h1">
-          Skills
-        </Typography>
-      </Parallax>
+      <Typography className={classes.heading} variant="h2">
+        Developer Skills
+      </Typography>
       <div className={classes.layout}>
         <div className={classes.skillGroup}>
-          <Parallax
-            animation={{ y: 0, opacity: 1, playScale: [0.1, 0.5] }}
-            style={{ transform: "translateY(100px)", opacity: 0 }}
-          >
-            <Typography variant="h2">Fullstack</Typography>
-            <div className={classes.skillGrid}>
-              {[reactjs, nodejs, django, kotlin].map((item, index) => (
-                <div key={index} className={classes.skillLogoContainer}>
-                  <img className={classes.logo} alt="" src={item}></img>
-                </div>
-              ))}
-            </div>
-          </Parallax>
+          <Typography variant="h3">Fullstack</Typography>
+          <div className={classes.skillGrid}>
+            {[reactjs, nodejs, django, kotlin].map((item, index) => (
+              <div key={index} className={classes.skillLogoContainer}>
+                <img className={classes.logo} alt="" src={item}></img>
+              </div>
+            ))}
+          </div>
         </div>
         <div className={classes.skillGroup}>
-          <Parallax
-            animation={{ y: 0, opacity: 1, playScale: [0.1, 0.5] }}
-            style={{ transform: "translatey(100px)", opacity: 0 }}
-          >
-            <Typography variant="h2">Application</Typography>
-            <div className={classes.skillGrid}>
-              {[androidstudio, reactjs, flutter].map((item, index) => (
-                <div key={index} className={classes.skillLogoContainer}>
-                  <img className={classes.logo} alt="" src={item}></img>
-                </div>
-              ))}
-            </div>
-          </Parallax>
+          <Typography variant="h3">Application</Typography>
+          <div className={classes.skillGrid}>
+            {[androidstudio, reactjs, flutter].map((item, index) => (
+              <div key={index} className={classes.skillLogoContainer}>
+                <img className={classes.logo} alt="" src={item}></img>
+              </div>
+            ))}
+          </div>
         </div>
         <div className={classes.skillGroup}>
-          <Parallax
-            animation={{ y: 0, opacity: 1, playScale: [0.1, 0.5] }}
-            style={{ transform: "translateY(100px)", opacity: 0 }}
-          >
-            <Typography variant="h2">DevOps</Typography>
-            <div className={classes.skillGrid}>
-              {[docker, kubernets].map((item, index) => (
-                <div key={index} className={classes.skillLogoContainer}>
-                  <img className={classes.logo} alt="" src={item}></img>
-                </div>
-              ))}
-            </div>
-          </Parallax>
+          <Typography variant="h3">DevOps</Typography>
+          <div className={classes.skillGrid}>
+            {[docker, kubernets, travis].map((item, index) => (
+              <div key={index} className={classes.skillLogoContainer}>
+                <img className={classes.logo} alt="" src={item}></img>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
