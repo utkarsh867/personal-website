@@ -69,7 +69,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           "http-equiv": `cache-control`,
-          content: `max-age=0`,
+          content: `no-cache`,
         },
       ].concat(meta)}
     />
