@@ -72,31 +72,54 @@ export const Skills = () => {
         <div className={classes.skillGroup}>
           <Typography variant="h3">Fullstack</Typography>
           <div className={classes.skillGrid}>
-            {[reactjs, nodejs, django, kotlin].map((item, index) => (
-              <div key={index} className={classes.skillLogoContainer}>
-                <img className={classes.logo} alt="" src={item}></img>
-              </div>
-            ))}
+            <div key="ReactJS" className={classes.skillLogoContainer}>
+              <img className={classes.logo} alt="ReactJS" src={reactjs}></img>
+            </div>
+            <div key="NodeJS" className={classes.skillLogoContainer}>
+              <img className={classes.logo} alt="NodeJS" src={nodejs}></img>
+            </div>
+            <div key="Django" className={classes.skillLogoContainer}>
+              <img className={classes.logo} alt="Django" src={django}></img>
+            </div>
+            <div key="Kotlin" className={classes.skillLogoContainer}>
+              <img className={classes.logo} alt="Kotlin" src={kotlin}></img>
+            </div>
           </div>
         </div>
         <div className={classes.skillGroup}>
           <Typography variant="h3">Application</Typography>
           <div className={classes.skillGrid}>
-            {[androidstudio, reactjs, flutter].map((item, index) => (
-              <div key={index} className={classes.skillLogoContainer}>
-                <img className={classes.logo} alt="" src={item}></img>
-              </div>
-            ))}
+            <div key="Android" className={classes.skillLogoContainer}>
+              <img
+                className={classes.logo}
+                alt="Android Studio"
+                src={androidstudio}
+              ></img>
+            </div>
+            <div key="ReactJS" className={classes.skillLogoContainer}>
+              <img className={classes.logo} alt="ReactJS" src={reactjs}></img>
+            </div>
+            <div key="Flutter" className={classes.skillLogoContainer}>
+              <img className={classes.logo} alt="Flutter" src={flutter}></img>
+            </div>
           </div>
         </div>
         <div className={classes.skillGroup}>
           <Typography variant="h3">DevOps</Typography>
           <div className={classes.skillGrid}>
-            {[docker, kubernets, travis].map((item, index) => (
-              <div key={index} className={classes.skillLogoContainer}>
-                <img className={classes.logo} alt="" src={item}></img>
-              </div>
-            ))}
+            <div key="Docker" className={classes.skillLogoContainer}>
+              <img className={classes.logo} alt="Docker" src={docker}></img>
+            </div>
+            <div key="Kubernets" className={classes.skillLogoContainer}>
+              <img
+                className={classes.logo}
+                alt="Kubernets"
+                src={kubernets}
+              ></img>
+            </div>
+            <div key="Travis CI" className={classes.skillLogoContainer}>
+              <img className={classes.logo} alt="Travis CI" src={travis}></img>
+            </div>
           </div>
         </div>
       </div>

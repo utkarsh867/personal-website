@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Utkarsh Goel`,
-    description: `Utkarsh Goel - Bachelor of Engineering, University of Hong Kong, Software development and electronics.`,
+    description: `Utkarsh Goel - Bachelor of Engineering, University of Hong Kong, Software Developer.`,
     author: `@utkarsh867`,
     siteUrl: `https://www.utkarshgoel.dev/`,
   },
