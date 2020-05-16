@@ -58,7 +58,7 @@ export const WorkCard = ({ title, subtitle, text, link, image }) => {
   return (
     <ButtonBase
       className={classes.buttonbase}
-      onClick={() => (link == "" ? null : window.location.assign(link))}
+      onClick={() => (link === "" ? null : window.location.assign(link))}
     >
       <Paper className={classes.container} elevation={0}>
         <div>

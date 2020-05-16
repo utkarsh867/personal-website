@@ -67,6 +67,10 @@ function SEO({ description, lang, meta, title }) {
           name: `twitter:description`,
           content: metaDescription,
         },
+        {
+          "http-equiv": `cache-control`,
+          content: `max-age=0`,
+        },
       ].concat(meta)}
     />
   )

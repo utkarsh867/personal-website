@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import { Typography, makeStyles } from "@material-ui/core"
 import profileImage from "../images/profile.jpg"
 import GitHubIcon from "@material-ui/icons/GitHub"

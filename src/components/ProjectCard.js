@@ -10,7 +10,6 @@ import {
   CardActions,
   Button,
 } from "@material-ui/core"
-import { Parallax } from "rc-scroll-anim"
 
 const useStyles = makeStyles(theme => ({
   projectsContainer: {
